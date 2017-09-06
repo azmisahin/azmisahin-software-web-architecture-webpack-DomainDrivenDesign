@@ -7,7 +7,7 @@ npm install
 # Build
 npm run build
 
-# Developer dDependencies
+# Developer Dependencies
 - clean-webpack-plugin
 - css-loader
 - csv-loader
