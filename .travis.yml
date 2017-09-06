@@ -16,6 +16,6 @@ git:
 
 deploy:
   provider: heroku
-  api_key:
-    secure: "7acee654-77bf-4920-a828-49704c9da102"
+  api_key: "7acee654-77bf-4920-a828-49704c9da102"
   app: azmisahin-webpack
+  skip_cleanup: true
