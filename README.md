@@ -1,6 +1,8 @@
 # com.domain.www.webpack.web
 Webpack, nodejs
 
+[![Build Status](https://travis-ci.org/azmisahin/com.domain.www.webpack.web.svg?branch=master)](https://travis-ci.org/azmisahin/com.domain.www.webpack.web)
+
 # Installation
 npm install
 
