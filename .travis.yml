@@ -13,3 +13,9 @@ script:
 
 git:
   depth: 10
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "7acee654-77bf-4920-a828-49704c9da102"
+  app: azmisahin-webpack
