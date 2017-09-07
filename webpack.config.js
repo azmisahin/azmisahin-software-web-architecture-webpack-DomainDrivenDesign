@@ -21,6 +21,9 @@ var distFolder = 'dist';
 // Enrty
 var enrty = {
     app:'./src/index.js'
+    , button:'./src/components/button/index.js'
+    , media:'./src/components/media/index.js'
+    , print:'./src/components/print/index.js'
  };
 
  // Output
@@ -82,6 +85,7 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
      entry:enrty,
      output:output,
      module:modules,
+     devtool:'inline-source-map',
      plugins:[
          new CleanWebpackPlugin([distFolder]),
          new HtmlWebpackPlugin({
