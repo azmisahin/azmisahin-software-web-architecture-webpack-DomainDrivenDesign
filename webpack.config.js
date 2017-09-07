@@ -29,7 +29,8 @@ var enrty = {
  // Output
  var output = {
     filename:'[name].bundle.js',
-    path: path.resolve(__dirname,distFolder)
+    path: path.resolve(__dirname,distFolder),
+    publicPath:'/'
 };
 
 // Modules
