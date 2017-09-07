@@ -1,14 +1,15 @@
 {
   "name": "com.domain.www.react.web",
   "version": "1.0.0",
-  "description": "",
+  "description": "Webpack Tutorial",
   "main": "index.js",
   "scripts": {
+    "watch":"webpack --watch",
     "build": "webpack"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "bilgi@azmisahin.com",
+  "license": "MIT",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.7",
