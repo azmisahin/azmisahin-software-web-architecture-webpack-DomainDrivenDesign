@@ -87,7 +87,13 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
      module:modules,
      devtool:'inline-source-map',
      devServer:{
-         contentBase:'./dist'
+         contentBase: path.join(__dirname,'dist'),
+         compress:true,
+         port:80,
+         allowedHosts:[
+             '.herokuapp.com',
+             '.azmisahin.com'
+         ]
      },
      plugins:[
          new CleanWebpackPlugin([distFolder]),
