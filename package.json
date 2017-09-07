@@ -4,8 +4,9 @@
   "description": "Webpack Tutorial",
   "main": "index.js",
   "scripts": {
-    "watch":"webpack --watch",
-    "build": "webpack"
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
   },
   "keywords": [],
   "author": "bilgi@azmisahin.com",
@@ -19,6 +20,7 @@
     "lodash": "^4.17.4",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {}

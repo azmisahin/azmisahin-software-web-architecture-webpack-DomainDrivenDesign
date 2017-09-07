@@ -86,6 +86,9 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
      output:output,
      module:modules,
      devtool:'inline-source-map',
+     devServer:{
+         contentBase:'./dist'
+     },
      plugins:[
          new CleanWebpackPlugin([distFolder]),
          new HtmlWebpackPlugin({
