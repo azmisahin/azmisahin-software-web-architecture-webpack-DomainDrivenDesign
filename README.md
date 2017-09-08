@@ -1,5 +1,12 @@
-# com.domain.www.webpack.web
+# Webpack Web Application
 Webpack, nodejs, express
+
+# Continuous Deployment
+https://azmisahin-webpack.herokuapp.com/
+
+# Continuous Integration
+https://travis-ci.org/azmisahin/com.domain.www.webpack.web
+
 
 [![Build Status](https://travis-ci.org/azmisahin/com.domain.www.webpack.web.svg?branch=master)](https://travis-ci.org/azmisahin/com.domain.www.webpack.web)
 
