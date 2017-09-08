@@ -15,6 +15,15 @@
  // Require
 const path = require('path');
 
+// Html Webpack Plugin
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+// Clean Distributor Folder
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+// Webpack Module
+const webpack = require('webpack');
+
 // Distributor Folder
 var distFolder = 'dist';
 
@@ -70,12 +79,6 @@ var modules = {
     ]
 };
 
-// Html Webpack Plugin
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// Clean Distributor Folder
-var CleanWebpackPlugin = require('clean-webpack-plugin');
-
 /**
  * Configuration Module
  * 
@@ -94,11 +97,16 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
          allowedHosts:[
              '.herokuapp.com',
              '.azmisahin.com'
-         ]
+         ],
+         // HMR
+         hot:true
      },
      plugins:[
          new CleanWebpackPlugin([distFolder]),
          new HtmlWebpackPlugin({
-         title:'Webpack Tutorial'
-     })]
+             title:'Webpack Tutorial'
+            }),
+        // Hot Module Repleacement Plugin
+        new webpack.HotModuleReplacementPlugin()
+        ]
  };

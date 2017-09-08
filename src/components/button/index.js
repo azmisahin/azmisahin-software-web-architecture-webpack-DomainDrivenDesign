@@ -20,14 +20,14 @@ import print from '../print/index.js';
   
       // Set Element Value
       result.innerHTML = "<h1>Hello World</h1>";
-      btn.innerHTML = "Click Me";
+      btn.innerHTML = "Click Me!";
   
       // Event
       btn.onclick = print;
   
       // Add a Main Element
       result.appendChild(btn);
-  
+
       // Return Result
       return result;
   }
