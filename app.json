@@ -1,0 +1,8 @@
+{
+  "name": "Webpack heroku application",
+  "description": "Azmi SAHİN Test Herko App",
+  "repository": "https://github.com/azmisahin/com.domain.www.webpack.web.git",
+  "logo": "https://raw.githubusercontent.com/azmisahin/com.domain.www.webpack.web/master/src/components/media/favicon.png",
+  "keywords": ["nodejs", "webpack", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
