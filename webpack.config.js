@@ -24,6 +24,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 // Webpack Module
 const webpack = require('webpack');
 
+// Minify
+const Minify = require('uglifyjs-webpack-plugin');
+
 // Distributor Folder
 var distFolder = 'dist';
 
@@ -107,6 +110,9 @@ var modules = {
              title:'Webpack Tutorial'
             }),
         // Hot Module Repleacement Plugin
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+
+        // Minify
+        new Minify()
         ]
  };
