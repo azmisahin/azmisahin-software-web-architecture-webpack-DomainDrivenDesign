@@ -51,6 +51,12 @@
    new Minify({
      // Production Minify Map
      sourceMap:true
+   }),
+   // Specify the Environment
+   new webpack.DefinePlugin({
+     'process.env':{
+       'NODE_ENV':JSON.stringify('production')
+     }
    })
    ]
   });
