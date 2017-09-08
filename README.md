@@ -8,7 +8,8 @@ https://azmisahin-webpack.herokuapp.com/
 https://travis-ci.org/azmisahin/com.domain.www.webpack.web
 
 
-[![Build Status](https://travis-ci.org/azmisahin/com.domain.www.webpack.web.svg?branch=master)](https://travis-ci.org/azmisahin/com.domain.www.webpack.web)
+[![Build Status](https://travis-ci.org/azmisahin/com.domain.www.webpack.web.svg?branch=master)](https://travis-ci.org/azmisahin/com.domain.www.webpack.web)[![Coverage Status](https://coveralls.io/repos/github/azmisahin/com.domain.www.react.web/badge.svg?branch=master)](https://coveralls.io/github/azmisahin/com.domain.www.react.web?branch=master)
+
 
 # Installation
 $ npm install
