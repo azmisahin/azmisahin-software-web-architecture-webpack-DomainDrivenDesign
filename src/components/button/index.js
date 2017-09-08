@@ -12,15 +12,15 @@ import print from '../print/index.js';
  /**
   * Create
   */
- export default function createButton(){
+ export default function createButton(title,content){
 
       // Creare Container Element
       var result = document.createElement('div');
       var btn = document.createElement('button');
   
       // Set Element Value
-      result.innerHTML = "<h1>Hello World</h1>";
-      btn.innerHTML = "Click Me!";
+      result.innerHTML = title;
+      btn.innerHTML = content;
   
       // Event
       btn.onclick = print;

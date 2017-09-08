@@ -12,28 +12,19 @@
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
  **/
 
+ // Hot Module
+ require('./components/hot');
+
 // Button Element
 import Button from './components/button';
 
 // Media Element
 import Media from './components/media';
 
+// Math in cube module
+import { cube } from './components/math';
+
 // Add a Element
-document.body.appendChild(new Button());
+document.body.appendChild(new Button('Hello World','Click Me!'));
 document.body.appendChild(new Media());
-
-// Current Document Title
-var currentTile = document.title;
-   
-// Hot Module Updating System
-if(module.hot){
-
-    // Set a Updateting Message
-    document.title = "Updating...";
-    
-    // Proccess
-
-    // Wait
-    setTimeout(function(){ document.title = currentTile; }, 5000);
-    
-  }
+document.body.appendChild(new Button('Cube',['value:',cube(5)].join('\n\n')));
