@@ -1,6 +1,6 @@
 /**
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
- * Name          :   Webpack Web Application Production Configuration
+ * Name          :   Webpack Web Application Client
  * Version       :   @package.json.version
  * Description   :   Web Application With Webpack
  * Author        :   Azmi ŞAHİN <bilgi@azmisahin.com>
@@ -11,53 +11,43 @@
  * Homepage      :   https://azmisahin.github.io
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
  **/
- // Require
- const path = require('path');
- 
- // Clean Distributor Folder
- const CleanWebpackPlugin = require('clean-webpack-plugin');
- 
- // Html Webpack Plugin
- const HtmlWebpackPlugin = require('html-webpack-plugin');
- 
- // Webpack Module
- const webpack = require('webpack');
- 
- // Minify
- const Minify = require('uglifyjs-webpack-plugin');
-  
- // Merge Configuration
- const merge = require('webpack-merge');
- const common = require('./webpack.common.js');
 
- /**
-  * Configuration Module
-  * 
-  * This module webpack configuration
-  */
- 
-  module.exports = merge(common,{
-    // Production Source Mapping
-    devtool:'source-map',
-    plugins:[
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-        title:'Webpack Tutorial'
-        , favicon:'src/client/favicon.ico'
-       }),
-   // Hot Module Repleacement Plugin
-   new webpack.HotModuleReplacementPlugin(),
+ /* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
 
-   // Minify
-   new Minify({
-     // Production Minify Map
-     sourceMap:true
-   }),
-   // Specify the Environment
-   new webpack.DefinePlugin({
-     'process.env':{
-       'NODE_ENV':JSON.stringify('production')
-     }
-   })
-   ]
-  });
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}

@@ -1,6 +1,6 @@
 /**
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
- * Name          :   Webpack Web Application
+ * Name          :   Webpack Web Application Client
  * Version       :   @package.json.version
  * Description   :   Web Application With Webpack
  * Author        :   Azmi ŞAHİN <bilgi@azmisahin.com>
@@ -12,19 +12,31 @@
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
  **/
 
- // Hot Module
- require('./components/hot');
+ // Hot
+ import '../components/hot';
 
-// Button Element
-import Button from './components/button';
+// Require
+import 'bootstrap/dist/css/bootstrap.css';
 
-// Media Element
-import Media from './components/media';
+// Header Component
+import Header from './components/header';
 
-// Math in cube module
-import { cube } from './components/math';
+// Header Component
+import Footer from './components/footer';
 
-// Add a Element
-document.body.appendChild(new Button('Hello World','Click Me!'));
-document.body.appendChild(new Media());
-document.body.appendChild(new Button('Cube',['value:',cube(5)].join('\n\n')));
+// HomePage
+import HomePage from './views/home';
+
+// Header Module
+var header = new Header('');
+
+// Footer Module
+var footer = new Footer('Open source web page: http://azmisahin.github.io');
+
+// Home Page
+var homePage = new HomePage('');
+
+// Create Home Page
+document.body.appendChild(header);
+document.body.appendChild(homePage);
+document.body.appendChild(footer);

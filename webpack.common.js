@@ -21,10 +21,8 @@
  
  // Enrty
  var enrty = {
-     app:'./src/index.js'
-     , button:'./src/components/button/index.js'
-     , media:'./src/components/media/index.js'
-     , print:'./src/components/print/index.js'
+     // Application Client
+     app:'./src/client/index.js'
   };
  
   // Output
@@ -45,7 +43,7 @@
              ]
          },
          {
-             test:/\.(png|svg|jpg|gif)$/,
+             test:/\.(png|svg|jpg|gif|ico)$/,
              use:[
                  'file-loader'
              ]
@@ -67,7 +65,13 @@
              use: [
                  'xml-loader'
              ]
-         }
+         },
+         {
+             test: /\.scss$/,
+             use: [{
+                 loader: "style-loader"
+                }]
+        }
      ]
  };
  
