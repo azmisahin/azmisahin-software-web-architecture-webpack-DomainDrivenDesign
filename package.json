@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open webpack.dev.js",
     "server": "node server.js",
-    "build": "webpack"
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "bilgi@azmisahin.com",
@@ -25,7 +25,8 @@
     "xml-loader": "^1.2.1",
     "express": "^4.15.4",
     "webpack-dev-middleware": "^1.12.0",
-    "uglifyjs-webpack-plugin":"^0.4.6"
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack-merge": "^4.1.0"
   },
   "dependencies": {}
 }

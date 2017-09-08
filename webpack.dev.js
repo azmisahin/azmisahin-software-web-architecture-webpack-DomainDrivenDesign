@@ -1,6 +1,6 @@
 /**
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
- * Name          :   Webpack Web Application Production Configuration
+ * Name          :   Webpack Web Application Developer Configuration
  * Version       :   @package.json.version
  * Description   :   Web Application With Webpack
  * Author        :   Azmi ŞAHİN <bilgi@azmisahin.com>
@@ -11,11 +11,13 @@
  * Homepage      :   https://azmisahin.github.io
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
  **/
+
  // Require
+ const path = require('path');
  
  // Merge Configuration
  const merge = require('webpack-merge');
- const prod = require('./webpack.prod.js');
+ const common = require('./webpack.common.js');
 
  /**
   * Configuration Module
@@ -23,5 +25,17 @@
   * This module webpack configuration
   */
  
-  module.exports = merge(prod,{
+  module.exports = merge(common,{
+      devtool:'inline-source-map',
+      devServer:{
+          contentBase: path.join(__dirname,distFolder),
+          compress:true,
+          port:80,
+          allowedHosts:[
+              '.herokuapp.com',
+              '.azmisahin.com'
+          ],
+          // HMR
+          hot:true
+      }
   });
