@@ -37,6 +37,7 @@
   */
  
   module.exports = merge(common,{
+    // Production Source Mapping
     devtool:'source-map',
     plugins:[
     new CleanWebpackPlugin(['dist']),
@@ -47,6 +48,9 @@
    new webpack.HotModuleReplacementPlugin(),
 
    // Minify
-   new Minify()
+   new Minify({
+     // Production Minify Map
+     sourceMap:true
+   })
    ]
   });
