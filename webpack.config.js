@@ -11,17 +11,17 @@
  * Homepage      :   https://azmisahin.github.io
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
  **/
- // Require
- 
- // Merge Configuration
- const merge = require('webpack-merge');
- const prod = require('./webpack.prod.js');
+// Require
 
- /**
-  * Configuration Module
-  * 
-  * This module webpack configuration
-  */
- 
-  module.exports = merge(prod,{
-  });
+// Merge Configuration
+const merge = require('webpack-merge');
+const prod = require('./webpack.prod.js');
+
+/**
+ * Configuration Module
+ * 
+ * This module webpack configuration
+ */
+
+module.exports = merge(prod, {
+});

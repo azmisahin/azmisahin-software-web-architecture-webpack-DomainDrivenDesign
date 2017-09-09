@@ -12,30 +12,33 @@
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
  **/
 
- // Require
- const path = require('path');
- 
- // Merge Configuration
- const merge = require('webpack-merge');
- const common = require('./webpack.common.js');
+// Require
+const path = require('path');
 
- /**
-  * Configuration Module
-  * 
-  * This module webpack configuration
-  */
- 
-  module.exports = merge(common,{
-      devtool:'inline-source-map',
-      devServer:{
-          contentBase: path.join(__dirname,'dist'),
-          compress:true,
-          port:80,
-          allowedHosts:[
-              '.herokuapp.com',
-              '.azmisahin.com'
-          ],
-          // HMR
-          hot:true
-      }
-  });
+// Application Config
+const config = require('./package.json');
+
+// Merge Configuration
+const merge = require('webpack-merge');
+const common = require('./webpack.common.js');
+
+/**
+ * Configuration Module
+ * 
+ * This module webpack configuration
+ */
+
+module.exports = merge(common, {
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: path.join(__dirname, config.app.wwwroot),
+        compress: true,
+        port: 80,
+        allowedHosts: [
+            '.herokuapp.com',
+            '.azmisahin.com'
+        ],
+        // HMR
+        hot: true
+    }
+});

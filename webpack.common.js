@@ -12,77 +12,67 @@
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
  **/
 
- // Require
- const path = require('path');
- 
- 
- // Distributor Folder
- var distFolder = 'dist';
- 
- // Enrty
- var enrty = {
-     // Application Client
-     app:'./src/client/index.js'
-  };
- 
-  // Output
-  var output = {
-     filename:'[name].bundle.js',
-     path: path.resolve(__dirname,distFolder),
-     publicPath:'/',
- };
- 
- // Modules
- var modules = {
-     rules:[
-         {
-             test: /\.css$/,
-             use:[
-                 'style-loader',
-                 'css-loader'
-             ]
-         },
-         {
-             test:/\.(png|svg|jpg|gif|ico)$/,
-             use:[
-                 'file-loader'
-             ]
-         },
-         {
-             test:/\.(woff|woff2|eot|ttf|otf)$/,
-             use:[
-                 'file-loader'
-             ]
-         },
-         {
-             test:/\.(csv|tsv)$/,
-             use:[
-                 'csv-loader'
-             ]
-         },
-         {
-             test:/\.xml$/,
-             use: [
-                 'xml-loader'
-             ]
-         },
-         {
-             test: /\.scss$/,
-             use: [{
-                 loader: "style-loader"
-                }]
-        }
-     ]
- };
- 
- /**
-  * Configuration Module
-  * 
-  * This module webpack configuration
-  */
- 
-  module.exports = {
-      entry:enrty,
-      output:output,
-      module:modules
-  };
+// Require
+const path = require('path');
+
+// Application Config
+const config = require('./package.json');
+
+// Enrty
+var enrty = {
+    // Application Client
+    client: './src/client/index.js'
+};
+
+// Output
+var output = {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, config.app.wwwroot),
+    publicPath: '/',
+};
+
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+// Modules
+var modules = {
+    rules: [{
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: "css-loader"
+        })
+    },
+    {
+        test: /\.(png|svg|jpg|gif|ico)$/,
+        use: ['file-loader']
+    },
+    {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ['file-loader']
+    },
+    {
+        test: /\.(csv|tsv)$/,
+        use: ['csv-loader']
+    },
+    {
+        test: /\.xml$/,
+        use: ['xml-loader']
+    },
+    {
+        test: /\.scss$/,
+        use: [{ loader: "style-loader" }]
+    }
+    ]
+};
+
+/**
+ * Configuration Module
+ * 
+ * This module webpack configuration
+ */
+
+module.exports = {
+    entry: enrty,
+    output: output,
+    module: modules
+};
