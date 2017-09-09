@@ -1,8 +1,8 @@
 /**
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
- * Name          :   Webpack Web Application Server
+ * Name          :   Webpack Web Application Tests
  * Version       :   @package.json.version
- * Description   :   Web Application With Webpack - Server
+ * Description   :   Web Application With Webpack
  * Author        :   Azmi ŞAHİN <bilgi@azmisahin.com>
  * Licence       :   MIT
  * ════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -12,44 +12,15 @@
  * ████████████████████████████████████████████████████████████████████████████████████████████████████
  **/
 
- // Require
- const express = require('express');
- const webpack = require('webpack');
- const webpackDevMiddleware = require('webpack-dev-middleware');
+'use strict';
 
- // Middleware Application
- const app = express();
- const config = require('./webpack.config.js');
- const compiler = webpack(config);
+/**
+ * Mock Tests
+ * 
+ */
 
- // Configuration Use
- app.use(webpackDevMiddleware(compiler,{
-     publicPath:config.output.publicPath
- }));
+// describe('CLIENT TESTS', require('./client'));
 
- // Port Configuration
- var port = normalizePort(process.env.PORT || '3000');
- 
- // Application Listen Start
- app.listen(port,function(){
-     console.log("Application Start:" + port);
- });
+// describe('COMPONENT TESTS', require('./components'));
 
-
-// Port Normalize
-function normalizePort(val) {
-    var port = parseInt(val, 10);
-  
-    if (isNaN(port)) {
-      // named pipe
-      return val;
-    }
-  
-    if (port >= 0) {
-      // port number
-      return port;
-    }
-  
-    return false;
-  }
-  
+describe('SERVER TESTS', require('./server'));

@@ -3,17 +3,18 @@ sudo: false
 language: node_js
 
 node_js:
-  - "6"
+- "6"
 
 before_script:
-  - npm install
+- npm install
 
 script:
-  - npm run build
+- npm test
+- npm run build
 
 git:
   depth: 10
-
+  
 deploy:
   provider: heroku
   api_key: "7acee654-77bf-4920-a828-49704c9da102"
