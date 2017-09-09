@@ -4,6 +4,8 @@ Webpack, nodejs, express, bootstrapt
 # Continuous Deployment
 https://azmisahin-webpack.herokuapp.com/
 
+http://azmisahin-webpack.azurewebsites.net/
+
 # Continuous Integration
 https://travis-ci.org/azmisahin/com.domain.www.webpack.web
 
