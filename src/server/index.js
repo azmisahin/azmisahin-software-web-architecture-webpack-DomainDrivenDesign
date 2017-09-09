@@ -103,6 +103,9 @@ Instance.prototype = (function () {
  */
 function Instance() { this.init(); };
 
+// Instance Create
+new Instance();
+
 /**
  * Application Instance
  * Node Domain Driven Design
