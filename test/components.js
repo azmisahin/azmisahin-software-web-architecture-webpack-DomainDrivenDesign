@@ -12,7 +12,6 @@ var chai = require('chai');
 var expect = chai.expect;
 
 // Test Object
-var Instance = require('../../src/components');
 
 'use strict';
 
@@ -21,13 +20,47 @@ var Instance = require('../../src/components');
  * 
  */
 module.exports = function () {
-    it("Instance Create", function () {
+    it("Iteration Components", function () {
 
         // Define
-        var expected = Instance;
-        var actual = new Instance();
-    
+
         // Expect
-        expect(actual).to.be.an.instanceof(expected);
+    });
+
+    it("Iteration Data", function () {
+
+        // Define
+
+        // Expect
+    });
+
+    it("Iteration Hot", function () {
+
+        // Define
+
+        // Expect
+    });
+
+
+    it("Iteration Html", function () {
+
+        // Define
+
+        // Expect
+    });
+
+    it("Iteration Math", function () {
+
+        // Define
+
+        // Expect
+    });
+
+
+    it("Iteration Print", function () {
+
+        // Define
+
+        // Expect
     });
 }

@@ -35,7 +35,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 // Build File Extract
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+// const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 /**
  * Configuration Module
@@ -65,7 +65,7 @@ module.exports = merge(common, {
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
-    }),
-    new ExtractTextPlugin(config.app.distroot + "/css/[name].css")
+    })
+    // ,new ExtractTextPlugin(config.app.distroot + "/css/[name].css")
   ]
 });

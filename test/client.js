@@ -1,7 +1,7 @@
 /**
  * ====================================================================================================
- * Name    : Server Unit Test
- * File    : server.js
+ * Name    : Client Unit Test
+ * File    : client.js
  * Version : 0.0.1
  * ====================================================================================================
  */
@@ -12,7 +12,6 @@ var chai = require('chai');
 var expect = chai.expect;
 
 // Test Object
-var Server = require('../../src/server');
 
 'use strict';
 
@@ -21,13 +20,23 @@ var Server = require('../../src/server');
  * 
  */
 module.exports = function () {
-    it("Server Application Instance Create", function () {
+    it("Iteration Client", function () {
 
         // Define
-        var expected = Server;
-        var actual = new Server();
-    
+
         // Expect
-        expect(actual).to.be.an.instanceof(expected);
+    });
+    it("Iteration Client Components", function () {
+
+        // Define
+
+        // Expect
+    });
+
+    it("Iteration Client Views", function () {
+
+        // Define
+
+        // Expect
     });
 }

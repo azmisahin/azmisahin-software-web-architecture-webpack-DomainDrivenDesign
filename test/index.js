@@ -19,8 +19,8 @@
  * 
  */
 
-// describe('CLIENT TESTS', require('./client'));
+describe('CLIENT TESTS', require('./client'));
 
-// describe('COMPONENT TESTS', require('./components'));
+describe('COMPONENT TESTS', require('./components'));
 
 describe('SERVER TESTS', require('./server'));

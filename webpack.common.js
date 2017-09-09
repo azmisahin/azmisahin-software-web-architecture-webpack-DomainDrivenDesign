@@ -31,16 +31,14 @@ var output = {
     publicPath: '/',
 };
 
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+// const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // Modules
 var modules = {
     rules: [{
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-            fallback: "style-loader",
-            use: "css-loader"
-        })
+        // use: ExtractTextPlugin.extract({fallback: "style-loader",use: "css-loader"})
+        use:['style-loader','css-loader']
     },
     {
         test: /\.(png|svg|jpg|gif|ico)$/,
