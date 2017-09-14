@@ -19,12 +19,6 @@ var expect = chai.expect;
  * Test Iteration
  * 
  */
-module.exports = function () {
-    it("Iteration Global Test", function () {
 
-        // Define
-        console.log("Global Test Iteration");
-
-        // Expect
-    });
-}
+// Application Configuration Manager
+var Config =  require('../src/config');
