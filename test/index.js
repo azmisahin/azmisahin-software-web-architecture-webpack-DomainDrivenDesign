@@ -19,7 +19,7 @@
  * 
  */
 
-describe('CLIENT TESTS', require('./test/client'));
+describe('CLIENT TESTS', require('../test/client'));
 
 describe('COMPONENT TESTS', require('../test/components'));
 
