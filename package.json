@@ -13,6 +13,7 @@
   "scripts": {
     "install": "webpack",
     "test": "mocha",
+    "coverage":"istanbul test/tests.js",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open webpack.dev.js",
     "server": "node src/server",
@@ -37,7 +38,8 @@
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.7.1",
     "webpack-merge": "^4.1.0",
-    "xml-loader": "^1.2.1"
+    "xml-loader": "^1.2.1",
+    "istanbul":"^0.4.5"
   },
   "dependencies": {
     "bootstrap": "^3.3.7"
