@@ -38,4 +38,4 @@ $ npm run server
 - uglifyjs-webpack-plugin
 - webpack-merge
 
-![webpack-domain-driven-design](docs/media/webpack-domain-driven-design.PNG)
+![webpack-domain-driven-design](media/webpack-domain-driven-design.PNG)
