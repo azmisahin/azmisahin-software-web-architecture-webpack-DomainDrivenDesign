@@ -24,7 +24,7 @@
     "clean-webpack-plugin": "^0.1.16",
     "coveralls": "^2.13.1",
     "css-loader": "^0.28.7",
-    "csv-loader": "^2.1.1",
+    "csv-loader": "^3.0.5",
     "express": "^4.15.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
